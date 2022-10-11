@@ -1,0 +1,18 @@
+
+.hero {
+    background: url("/assets/img/bg.jpg") no-repeat center center;
+    color: white;
+    background-size: cover;
+    height: 600px;
+
+}
+.heroTitle{
+    padding-top: 8rem;
+    font-size: 2.5rem;
+    font-family: 'Cinzel', serif;
+}
+
+.heroInfo{
+    padding: 1rem 0rem;
+    font-size: 1.5rem;
+}
