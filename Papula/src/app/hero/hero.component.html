@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col my-3 d-flex justify-content-center" *ngFor="let car of cars">
+        <div class="card position-relative" style="width: 18rem;">
+            <img src="{{car.image}}" class="card-img-top" alt="{{car.name}}">
+            <div class="card-body">
+              <h5 class="card-title">{{car.name}}</h5>
+              <p class="card-text pb-3">{{car.text}}</p>
+              <a href="{{car.link}}" class="btn btn-primary position-absolute bottom-0 start-50 translate-middle-x" target="_blank">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
