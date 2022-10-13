@@ -7,6 +7,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { HeroComponent } from './hero/hero.component';
+import { ContactComponent } from './contact/contact.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RentComponent } from './rent/rent.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +17,14 @@ import { HeroComponent } from './hero/hero.component';
     NavbarComponent,
     HomeComponent,
     AboutComponent,
-    HeroComponent
+    HeroComponent,
+    ContactComponent,
+    RentComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

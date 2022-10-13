@@ -1,0 +1,65 @@
+<h2>We offer car rental service</h2>
+<div class="border border-warning p-3">
+  <form [formGroup]="inputCar" (ngSubmit)="onSubmit()" class="row g-3">
+    <div class="col-md-6">
+      <label for="validationServer01" class="form-label">Model</label>
+      <input
+        type="text"
+        formControlName="model"
+        class="form-control"
+        required
+      />
+    </div>
+
+    <div class="col-md-6">
+      <label for="validationServer02" class="form-label">Brand</label>
+      <input
+        type="text"
+        formControlName="brand"
+        class="form-control"
+        required
+      />
+    </div>
+
+    <div class="col-md-8">
+      <label for="validationServer03" class="form-label">Price</label>
+      <input
+        type="text"
+        formControlName="price"
+        class="form-control"
+        required
+      />
+    </div>
+
+    <div class="col-md-4">
+      <label for="validationServer05" class="form-label">Image Link</label>
+      <input type="text" formControlName="img" class="form-control" required />
+    </div>
+
+    <div class="col-12">
+      <input class="btn btn-primary" type="submit" value="Submit" />
+    </div>
+  </form>
+</div>
+
+<div class="row m-3 d-flex justify-content-center">
+  <ng-template [ngIf]="carList.length > 0" [ngIfElse]="empty">
+    <div class="col row-col-md-4 row-col-lg-2" *ngFor="let car of carList">
+      <div class="card m-2" style="width: 18rem">
+        <img src="{{ car.img }}" alt="{{ car.brand }}" />
+        <div class="card-body">
+          <h5 class="card-title">{{ car.brand }}</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Model: {{ car.model }}</li>
+          <li class="list-group-item">
+            Rental Price: € {{ car.price }} per day
+          </li>
+        </ul>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template #empty>
+    <p class="text-center fw-bold">No cars found</p>
+  </ng-template>
+</div>

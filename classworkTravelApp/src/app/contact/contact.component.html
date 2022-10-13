@@ -1,0 +1,41 @@
+<h2>Feel free to contact us</h2>
+<form [formGroup]="contact" (ngSubmit)="onSubmit()" class="row g-3">
+  <div class="col-md-6">
+    <label for="validationServer01" class="form-label">First name</label>
+    <input
+      type="text"
+      formControlName="firstName"
+      class="form-control"
+      required
+    />
+  </div>
+
+  <div class="col-md-6">
+    <label for="validationServer02" class="form-label">Last name</label>
+    <input
+      type="text"
+      formControlName="lastName"
+      class="form-control"
+      required
+    />
+  </div>
+
+  <div class="col-md-8">
+    <label for="validationServer03" class="form-label">Message</label>
+    <input
+      type="text"
+      formControlName="message"
+      class="form-control"
+      required
+    />
+  </div>
+
+  <div class="col-md-4">
+    <label for="validationServer05" class="form-label">Email</label>
+    <input type="text" formControlName="email" class="form-control" required />
+  </div>
+
+  <div class="col-12">
+    <input class="btn btn-primary" type="submit" value="Submit" [disabled]="!contact.value" />
+  </div>
+</form>

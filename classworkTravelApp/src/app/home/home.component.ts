@@ -6,18 +6,50 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-    trip:string ="";
-    price:number = 0;
-    night:number = 0;
-    city:string= "";
-    img:string = "";
-  constructor(trip:string, price:number, night:number, city:string, img:string) { 
-    this.trip = trip;
-      this.price = price;
-      this.night = night;
-      this.city = city;
-      this.img = img; 
-  }
+  trips:Array<{name:string, price:number, night:number, city:string, img:string}> = [
+    {
+      name:"Luxus Intrendy",
+      price: 50000,
+      night: 10,
+      city:  "New York, USA", 
+      img: "https://images.unsplash.com/photo-1523374228107-6e44bd2b524e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+    }, {
+      name: "Luxus Jungle", 
+      price: 65000, 
+      night: 10, 
+      city: "South Africa", 
+      img: "https://images.unsplash.com/photo-1511185307590-3c29c11275ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
+    }, {
+      name: "Luxus Excotic", 
+      price: 45000, 
+      night: 10, 
+      city: "Phuket, Thailand", 
+      img: "https://images.unsplash.com/photo-1655921779877-b1eaebbf8543?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+    }, {
+      name: "Luxus up above", 
+      price: 55000, 
+      night: 10, 
+      city: "Innsbruck, Austria", 
+      img: "https://images.unsplash.com/photo-1517253259615-dff3842d2544?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+    }, {
+      name: "Luxus on Ice", 
+      price: 75000, 
+      night: 10, 
+      city: "Island", 
+      img: "https://images.unsplash.com/photo-1532926381893-7542290edf1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+    }, {
+      name: "Luxus Aurora", 
+      price: 80000, 
+      night: 10, 
+      city: "Norway", 
+      img: "https://images.unsplash.com/photo-1577456020912-85d0604ad403?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+    }
+  ];
+
+
+  cars: Array<{brand:string, seat:number, price: number, img:string}> = [];
+
+  constructor(){}
   
   ngOnInit(): void {
   }

@@ -22,15 +22,24 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/about">About</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact">Contact Us</a>
+        </li>
+           <li class="nav-item">
+          <a class="nav-link" routerLink="/rent">Rental Service</a>
+        </li>
       </ul>
-      <form class="d-flex" role="search">
+
+      <form class="d-flex">
+        <ng-template [ngIf]="donateAmount >= 200">
+          <input class="form-control me-2" placeholder="You are our VIP!" />
+        </ng-template>
         <input
-          class="form-control me-2"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
+          type="button"
+          class="btn btn-outline-light"
+          (click)="sumDonate()"
+          value="Donate {{ donateAmount }} €"
         />
-        <button class="btn btn-outline-light" type="submit">Search</button>
       </form>
     </div>
   </div>
